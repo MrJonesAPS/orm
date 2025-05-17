@@ -20,25 +20,25 @@ STATICFILES_DIRS = [
         BASE_DIR / "static",
 ]
 
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'cjones',
-        'USER': 'cjones',
-        'PASSWORD': os.getenv("PGPASSWORD"),
-        'HOST': 'dbserver.gctaa.net',
+        'NAME': 'postgres',
+        'USER': 'admin',
+        'PASSWORD': 'LocalPasswordOnly',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
 '''
-
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / 'db.sqlite3',
     }
 }
+'''
 
 LOGGING = {
     'version': 1,

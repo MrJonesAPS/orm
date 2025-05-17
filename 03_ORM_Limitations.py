@@ -35,16 +35,16 @@ def random_longitude():
 
 
 places = []
-owners = list(User.objects.all())
+#owners = list(User.objects.all())
 
-for _ in range(100):  # CHANGE THIS VALUE to test different table sizes
+for _ in range(10000):  # CHANGE THIS VALUE to test different table sizes
     places.append(
         # TODO: Replace this with the code that you wrote for Faker
         Place(
             name=myfake.company(),
             lat=random_latitude(),
             long=random_longitude(),
-            owner=random.choice(owners),
+            #owner=random.choice(owners),
         )
     )
 
